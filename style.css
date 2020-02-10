@@ -1,4 +1,4 @@
-@import "https://fonts.googleapis.com/css?family=Lato:400,700";
+/* @import "https://fonts.googleapis.com/css?family=Lato:400,700"; */
 
 * {
   margin: 0;
@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-body { 
+body {
   background-color: #F9F9F9;
   font-family: 'Lato', sans-serif;
 
@@ -17,16 +17,8 @@ a {
   text-decoration: none;
 }
 
-#page-wrapper { 
+#page-wrapper {
   position: relative;
-}
-
-#nav-bar{
-  width: -webkit-fill-available;
-}
-
-.logo {
-  /* width: 60vw; */
 }
 
 .logo>img {
@@ -38,4 +30,58 @@ a {
   align-items: center;
   text-align: center;
   margin-left: 20px;
+}
+
+/* #nav-bar {
+  width: -webkit-fill-available;
+} */
+
+.sub-menu {  
+  display: table;  
+  text-align: center;
+}
+
+.menu {
+  display: table-cell;
+  position: relative;  
+}
+
+.nav-link {
+  padding: 0px 20px;
+  position: relative;
+}
+
+.nav-link:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  top: 195%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s,
+    left 0.3s ease 0s;
+  width: 0;
+}
+
+a:hover:after {
+  border-bottom: 4px solid #4299E1;
+  width: 100%;
+  left: 0;
+}
+
+#page-wrapper .img-wrapper {
+  height: 35rem;
+  background-repeat: no-repeat;
+  background-image: url("img/card_game.jpg");
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  visibility: inherit;
+}
+
+#email{
+  background-color: rgba(221, 221, 221, .2);
 }
